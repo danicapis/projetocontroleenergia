@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #ccc;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Usuário</h1>
+        <form method="post" action="/atualizar?id={{id}}">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" value="{{nome}}" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" value="{{telefone}}" required>
+
+            <label for="origem">Origem</label>
+            <input type="text" id="origem" name="origem" value="{{origem}}" required>
+
+            <label for="data_contato">Data de Contato</label>
+            <input type="text" id="data_contato" name="data_contato" value="{{data_contato}}" required>
+
+            <label for="observacao">Observação</label>
+            <textarea id="observacao" name="observacao" required>{{observacao}}</textarea>
+
+            <button type="submit">Salvar Alterações</button>
+            <a href="/consulta">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
